@@ -22,8 +22,9 @@ Com base nas respostas, o sistema determina se a pessoa pode financiar ou não, 
 
 1. Certifique-se de ter o JDK instalado em seu sistema.
 2. Clone este repositório:
-   ```bash
-   git clone <URL do repositório>
+```bash
+git clone <URL do repositório>
+```
 3. Navegue até o diretório do projeto:
 ```bash
 cd <diretório do projeto>
