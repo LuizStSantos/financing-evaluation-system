@@ -24,15 +24,15 @@ Com base nas respostas, o sistema determina se a pessoa pode financiar ou não, 
 2. Clone este repositório:
    ```bash
    git clone <URL do repositório>
-Navegue até o diretório do projeto:
+3. Navegue até o diretório do projeto:
 ```bash
 cd <diretório do projeto>
 ```
-Compile o programa:
+4 .Compile o programa:
 ```bash
 javac Main.java
 ```
-Execute o programa:
+5 .Execute o programa:
 ```bash
 java Main
 ```
