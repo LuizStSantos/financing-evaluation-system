@@ -12,12 +12,11 @@ public class Main {
         boolean temEmpresa = SimNao(scanner.nextLine());
         System.out.println("Tem o nome no Serasa ? (sim ou não): ");
         boolean temSerasa = SimNao(scanner.nextLine());
-        System.out.println("Digite o valor do 'bem' a ser adquirido: ");
+        System.out.println("Digite o valor do empréstimo a ser adquirido: ");
         double bem = scanner.nextDouble();
         System.out.println("Digite a % da entrada ou valor da entrada: ");
         String entradaInput = scanner.next();
         double entrada;
-
         if (entradaInput.endsWith("%")){
             double porcentagem = Double.parseDouble(entradaInput.replace("%", "")) /100;
             entrada = bem * porcentagem;
@@ -27,30 +26,31 @@ public class Main {
         double sobra = bem - entrada;
         NumberFormat formatador = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
         String entradaFormatada = formatador.format(entrada);
-        String sobraFormatada = formatador.format(sobra);
         System.out.println("A entrada e de: " + entradaFormatada);
         System.out.println("Você aceita o valor da entrada? (sim ou não): ");
         boolean aceitaEntrada = SimNao(scanner.next());
+        System.out.println("Digite o número de meses para o financiamento: ");
+        double meses = scanner.nextDouble();
         System.out.println("Digite a taxa de juros mensal (Ex: 1.8): ");
         String taxaJurosInput = scanner.next().replace(',', '.');
         double taxaJuros = Double.parseDouble(taxaJurosInput) / 100;
-        System.out.println("Digite o número de meses para o financiamento: ");
-        double meses = scanner.nextDouble();
-        double saldoFinanciado = bem - entrada;
-        double montante = saldoFinanciado * Math.pow(1 + taxaJuros, meses);
+        double parcela = (sobra * Math.pow(1 + taxaJuros, meses) * taxaJuros) / (Math.pow(1 + taxaJuros, meses) - 1);
+        double totalPago = parcela * meses;
+        double entradaFinanciamento = totalPago + entrada;
         NumberFormat formatado2 = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-        String montanteFormatado = formatado2.format(montante);
+        String totalEntradaFinanciamento = formatado2.format(entradaFinanciamento);
         DecimalFormat decimalFormat = new DecimalFormat("#");
-        System.out.println("O valor total a ser pago, após " + decimalFormat.format(meses) + " meses, será: " + montanteFormatado);
+        System.out.println("O valor total pago, após " + decimalFormat.format(meses) + " meses será de : " + totalEntradaFinanciamento );
         System.out.println("Aceita esse valor com Juros? (sim ou não): ");
         boolean aceitaJuros = SimNao(scanner.next());
-        double parcelas = montante / meses;
-        String parcelasFormatadas = formatador.format(parcelas).replace("R$", "$");
+        double parcelas = totalPago / meses;
+        NumberFormat formatador3 = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        String parcelasFormatadas = formatador.format(parcelas);
         boolean podeFinanciar = (temEmprego || temEmpresa) && aceitaEntrada && aceitaJuros && !temSerasa;
         if (podeFinanciar){
             System.out.println("Financiamento 'Aprovado!'");
             System.out.println("A entrada será de: " + entradaFormatada);
-            System.out.println("Com parcelas de " + parcelasFormatadas + " por " + decimalFormat.format(meses) + " meses");
+            System.out.println("Com parcelas de " + parcelasFormatadas + " por " + decimalFormat.format(meses) + " meses.");
         }else {
             System.out.println("Financiamento 'Reprovado!' ");
             if (!temEmprego && !temEmpresa){
