@@ -11,24 +11,31 @@ public class Main {
         System.out.println("Tem empresa? (sim ou não): ");
         boolean temEmpresa = SimNao(scanner.nextLine());
         System.out.println("Tem o nome no Serasa ? (sim ou não): ");
-        boolean temSerasa = SimNao(scanner.next());
+        boolean temSerasa = SimNao(scanner.nextLine());
         System.out.println("Digite o valor do 'bem' a ser adquirido: ");
         double bem = scanner.nextDouble();
-        System.out.println("Digite a %% da entrada: ");
-        double porcentagem = scanner.nextDouble();
-        double entrada = bem * (porcentagem / 100);
+        System.out.println("Digite a % da entrada ou valor da entrada: ");
+        String entradaInput = scanner.next();
+        double entrada;
+
+        if (entradaInput.endsWith("%")){
+            double porcentagem = Double.parseDouble(entradaInput.replace("%", "")) /100;
+            entrada = bem * porcentagem;
+        }else {
+            entrada = Double.parseDouble(entradaInput.replace(".", "").replace(",", "."));
+        }
         double sobra = bem - entrada;
         NumberFormat formatador = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-        String entradaFormatada = formatador.format(entrada).replace("R$", "$");
-        String sobraFormatada = formatador.format(sobra).replace("R$", "$");
+        String entradaFormatada = formatador.format(entrada);
+        String sobraFormatada = formatador.format(sobra);
         System.out.println("A entrada e de: " + entradaFormatada);
         System.out.println("Você aceita o valor da entrada? (sim ou não): ");
         boolean aceitaEntrada = SimNao(scanner.next());
-        System.out.println("Digite a taxa de juros mensal (em %): ");
+        System.out.println("Digite a taxa de juros mensal (Ex: 1.8): ");
         String taxaJurosInput = scanner.next().replace(',', '.');
         double taxaJuros = Double.parseDouble(taxaJurosInput) / 100;
         System.out.println("Digite o número de meses para o financiamento: ");
-        int meses = scanner.nextInt();
+        double meses = scanner.nextDouble();
         double saldoFinanciado = bem - entrada;
         double montante = saldoFinanciado * Math.pow(1 + taxaJuros, meses);
         NumberFormat formatado2 = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
