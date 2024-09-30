@@ -46,30 +46,29 @@ Após fornecer todas essas informações, o sistema irá calcular se você é el
 
 Exemplo de Uso
 ```text
-Copiar código
-Tem emprego? (sim ou não):
+Tem emprego? (sim ou não): 
+Sim
+Tem empresa? (sim ou não): 
+Não
+Tem o nome no Serasa ? (sim ou não): 
+Não
+Digite o valor do empréstimo a ser adquirido: 
+11.000
+Digite a % da entrada ou valor da entrada: 
+2.000 // Aqui pode ser valor (Ex: 20%)
+A entrada e de: R$ 2.000,00
+Você aceita o valor da entrada? (sim ou não): 
 sim
-Tem empresa? (sim ou não):
-não
-Tem o nome no Serasa ? (sim ou não):
-não
-Digite o valor do empréstimo a ser adquirido:
-12.000
-Digite a % da entrada ou valor da entrada:
-10%
-A entrada é de: R$ 1.200,00
-Você aceita o valor da entrada? (sim ou não):
-sim
-Digite o número de meses para o financiamento:
-12
-Digite a taxa de juros mensal (Ex: 1.8):
-10
-O valor total pago, após 12 meses, será de: R$ 14.596,80
-Aceita esse valor com Juros? (sim ou não):
-sim
+Digite o número de meses para o financiamento: 
+24
+Digite a taxa de juros mensal (Ex: 1.8): 
+5.8
+O valor total pago, após 24 meses será de : R$ 18.893,90
+Aceita esse valor com Juros? (sim ou não): 
+Sim
 Financiamento 'Aprovado!'
-A entrada será de: R$ 1.200,00
-Com parcelas de R$ 1.100,00 por 12 meses.
+A entrada será de: R$ 2.000,00
+Com parcelas de R$ 703,91 por 24 meses.
 ```
 
 ## Créditos
