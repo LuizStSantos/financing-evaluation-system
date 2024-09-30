@@ -72,13 +72,11 @@ A entrada será de: R$ 1.200,00
 Com parcelas de R$ 1.100,00 por 12 meses.
 ```
 
-4. **Créditos**
+## Créditos
 - Autor: Luiz St. Santos
 - Data: 30 de Setembro de 2024
 - GitHub: LuizStSantos
 
-5. **Licença**
+## Licença
 
 Este projeto está licenciado sob a [MIT License](https://opensource.org/license/mit).
-
-Esse `README.md` fornece uma boa documentação do seu projeto, ajudando outros desenvolvedores ou colaboradores a entender e utilizar o sistema.
