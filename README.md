@@ -73,7 +73,7 @@ Com parcelas de R$ 1.100,00 por 12 meses.
 ```
 
 ## Créditos
-- Autor: Luiz St. Santos
+- Autor: Luiz Stormorwski dos Santos
 - Data: 30 de Setembro de 2024
 - GitHub: LuizStSantos
 
