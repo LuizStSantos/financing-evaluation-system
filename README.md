@@ -8,15 +8,18 @@ O programa faz as seguintes perguntas ao usuário:
 
 1. **Tem emprego?** (Responda "sim" ou "não")
 2. **Tem empresa?** (Responda "sim" ou "não")
-3. **Tem entrada maior ou igual a 50K?** (Responda "sim" ou "não")
-4. **Tem o nome no Serasa?** (Responda "sim" ou "não")
+3. **Tem o nome no Serasa?** (Responda "sim" ou "não")
+4. **Digite o valor do 'bem' a ser adquirido.**
+5. **Digite a porcentagem da entrada.**
+6. **Digite a taxa de juros mensal (em %).**
+7. **Digite o número de meses para o financiamento.**
 
 Com base nas respostas, o sistema determina se a pessoa pode financiar ou não, utilizando a seguinte lógica:
 
 - Pode financiar se:
-    - O usuário tiver emprego **ou** empresa,
-    - **E** tiver uma entrada maior ou igual a 50K,
-    - **E** não tiver o nome no Serasa.
+  - O usuário tiver emprego **ou** empresa,
+  - **E** tiver uma entrada que atende à porcentagem,
+  - **E** não tiver o nome no Serasa.
 
 ## Como Executar
 
@@ -39,4 +42,3 @@ java Main
 ```
 - Contribuições:
   Sinta-se à vontade para contribuir com melhorias ou correções. Faça um fork deste repositório, faça suas alterações e envie um pull request.
-
