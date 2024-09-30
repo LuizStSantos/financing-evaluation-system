@@ -1,3 +1,11 @@
+/*
+ * Autor: Luiz Stormorwski dos Santos
+ * Data: 30 de Setembro de 2024
+ * Descrição: Sistema para avaliação de financiamento, considerando entrada,
+ *            juros, número de parcelas, emprego, empresa e status no Serasa.
+ * GitHub: https://github.com/LuizStSantos/sistema-de-avaliacao-de-financiamento
+ */
+
 import java.util.Scanner;
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -13,17 +21,17 @@ public class Main {
         System.out.println("Tem o nome no Serasa ? (sim ou não): ");
         boolean temSerasa = SimNao(scanner.nextLine());
         System.out.println("Digite o valor do empréstimo a ser adquirido: ");
-        double bem = scanner.nextDouble();
+        double emprestimo = scanner.nextDouble();
         System.out.println("Digite a % da entrada ou valor da entrada: ");
         String entradaInput = scanner.next();
         double entrada;
         if (entradaInput.endsWith("%")){
             double porcentagem = Double.parseDouble(entradaInput.replace("%", "")) /100;
-            entrada = bem * porcentagem;
+            entrada = emprestimo * porcentagem;
         }else {
             entrada = Double.parseDouble(entradaInput.replace(".", "").replace(",", "."));
         }
-        double sobra = bem - entrada;
+        double sobra = emprestimo - entrada;
         NumberFormat formatador = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
         String entradaFormatada = formatador.format(entrada);
         System.out.println("A entrada e de: " + entradaFormatada);
