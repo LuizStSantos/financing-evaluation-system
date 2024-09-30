@@ -53,6 +53,18 @@ public class Main {
             System.out.println("Com parcelas de " + parcelasFormatadas + " por " + decimalFormat.format(meses) + " meses");
         }else {
             System.out.println("Financiamento 'Reprovado!' ");
+            if (!temEmprego && !temEmpresa){
+                System.out.println("Motivo: Você não tem emprego nem empresa.");
+            }
+            if (temSerasa){
+                System.out.println("Motivo: Seu nome está no Serasa.");
+            }
+            if (!aceitaEntrada){
+                System.out.println("Motivo: Você não aceitou o valor da entrada.");
+            }
+            if (!aceitaJuros){
+                System.out.println("Motivo: Você não aceitou o valor com juros.");
+            }
         }
         scanner.close();
     }
