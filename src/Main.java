@@ -1,6 +1,5 @@
 /*
  * Autor: Luiz Stormorwski dos Santos
- * Data: 30 de Setembro de 2024
  * Descrição: Sistema para avaliação de financiamento, considerando entrada,
  *            juros, número de parcelas, emprego, empresa e status no Serasa.
  * GitHub: https://github.com/LuizStSantos/sistema-de-avaliacao-de-financiamento
