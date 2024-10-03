@@ -21,7 +21,7 @@ This project is a simple financing evaluation system that requests information a
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/LuizStSantos/sistema-de-avaliacao-de-financiamento.git
+    git clone https://github.com/LuizStSantos/financing-evaluation-system.git
     ```
 
 2. **Compile and run**:
