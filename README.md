@@ -1,80 +1,82 @@
-# Sistema de Avaliação de Financiamento
+# Financing Evaluation System
 
-Este projeto é um sistema simples de avaliação de financiamento, que solicita informações sobre emprego, empresa, nome no Serasa, valor do empréstimo, entrada, e calcula o financiamento com base na taxa de juros mensal e número de parcelas.
+This project is a simple financing evaluation system that requests information about employment, company ownership, name status with Serasa, loan amount, down payment, and calculates the financing based on the monthly interest rate and number of installments.
 
-## Funcionalidades
+## Features
 
-- Verificação de possibilidade de financiamento com base em:
-  - Situação de emprego ou posse de empresa.
-  - Status do nome no Serasa.
-  - Aceitação do valor da entrada e juros.
-- Cálculo do valor total pago ao final do financiamento.
-- Cálculo de parcelas mensais com juros compostos.
+- Verification of financing eligibility based on:
+  - Employment status or company ownership.
+  - Status of the name with Serasa.
+  - Acceptance of the down payment amount and interest.
+- Calculation of the total amount paid at the end of the financing.
+- Calculation of monthly installments with compound interest.
 
-## Requisitos
+## Requirements
 
-- Java 8 ou superior
-- Maven ou Gradle (opcional, se estiver usando gerenciamento de dependências)
+- Java 8 or higher
+- Maven or Gradle (optional, if using dependency management)
 
-## Como usar
+## How to Use
 
-1. **Clonar o repositório**:
+1. **Clone the repository**:
 
-```bash
-git clone https://github.com/LuizStSantos/sistema-de-avaliacao-de-financiamento.git
-```
-2. **Compilar e rodar**:
-Dentro do diretório do projeto, compile e rode o código com os seguintes comandos:
+    ```bash
+    git clone https://github.com/LuizStSantos/sistema-de-avaliacao-de-financiamento.git
+    ```
 
-```bash
-cd sistema-de-avaliacao-de-financiamento
-javac Main.java
-java Main
-```
+2. **Compile and run**:
+   Inside the project directory, compile and run the code with the following commands:
 
-3. **Interagir com o sistema**:
+    ```bash
+    cd sistema-de-avaliacao-de-financiamento
+    javac Main.java
+    java Main
+    ```
 
-O sistema irá solicitar as seguintes informações:
-Se você possui emprego (sim ou não).
-Se você possui uma empresa (sim ou não).
-Se o seu nome está no Serasa (sim ou não).
-O valor do empréstimo que você deseja adquirir.
-O valor da entrada, em porcentagem ou valor absoluto.
-A quantidade de meses para o financiamento.
-A taxa de juros mensal.
-Após fornecer todas essas informações, o sistema irá calcular se você é elegível para o financiamento e exibirá os valores de entrada, parcelas mensais e o total a ser pago.
+3. **Interact with the system**:
 
-Exemplo de Uso
+   The system will prompt for the following information:
+   - Do you have a job? (yes or no)
+   - Do you own a company? (yes or no)
+   - Is your name with Serasa? (yes or no)
+   - Enter the loan amount you wish to acquire.
+   - Enter the down payment, either as a percentage or absolute value.
+   - Enter the number of months for financing.
+   - Enter the monthly interest rate.
+
+   After providing all this information, the system will calculate your eligibility for financing and display the down payment, monthly installments, and total amount to be paid.
+
+### Example of Use
 ```text
-Tem emprego? (sim ou não): 
-Sim
-Tem empresa? (sim ou não): 
-Não
-Tem o nome no Serasa ? (sim ou não): 
-Não
-Digite o valor do empréstimo a ser adquirido: 
-11.000
-Digite a % da entrada ou valor da entrada: 
-2.000 // Aqui pode ser valor (Ex: 20%)
-A entrada e de: R$ 2.000,00
-Você aceita o valor da entrada? (sim ou não): 
-sim
-Digite o número de meses para o financiamento: 
+Do you have a job? (yes or no): 
+Yes
+Do you own a company? (yes or no): 
+No
+Is your name with Serasa? (yes or no): 
+No
+Enter the loan amount to be acquired: 
+11,000
+Enter the % for down payment or down payment amount: 
+2,000 // Here it can be a value (e.g., 20%)
+The down payment is: R$ 2,000.00
+Do you accept the down payment amount? (yes or no): 
+yes
+Enter the number of months for financing: 
 24
-Digite a taxa de juros mensal (Ex: 1.8): 
+Enter the monthly interest rate (e.g., 1.8): 
 5.8
-O valor total pago, após 24 meses será de : R$ 18.893,90
-Aceita esse valor com Juros? (sim ou não): 
-Sim
-Financiamento 'Aprovado!'
-A entrada será de: R$ 2.000,00
-Com parcelas de R$ 703,91 por 24 meses.
+The total amount paid after 24 months will be: R$ 18,893.90
+Do you accept this amount with interest? (yes or no): 
+Yes
+Financing 'Approved!'
+The down payment will be: R$ 2,000.00
+With installments of R$ 703.91 for 24 months.
 ```
 
-## Créditos
-- Autor: Luiz Stormorwski dos Santos
-- GitHub: LuizStSantos
+## Credits
+- Author: Luiz Stormorwski dos Santos
+- GitHub: [LuizStSantos](https://github.com/LuizStSantos).
 
-## Licença
+## License
 
-Este projeto está licenciado sob a [MIT License](https://opensource.org/license/mit).
+This project is licensed under the [MIT License](https://opensource.org/license/mit).
