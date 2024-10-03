@@ -21,7 +21,7 @@ Este projeto é um sistema simples de avaliação de financiamento, que solicita
 1. **Clonar o repositório**:
 
 ```bash
-git clone git@github.com:LuizStSantos/sistema-de-avaliacao-de-financiamento.git
+git clone https://github.com/LuizStSantos/sistema-de-avaliacao-de-financiamento.git
 ```
 2. **Compilar e rodar**:
 Dentro do diretório do projeto, compile e rode o código com os seguintes comandos:
@@ -73,7 +73,6 @@ Com parcelas de R$ 703,91 por 24 meses.
 
 ## Créditos
 - Autor: Luiz Stormorwski dos Santos
-- Data: 30 de Setembro de 2024
 - GitHub: LuizStSantos
 
 ## Licença
