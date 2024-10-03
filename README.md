@@ -28,7 +28,7 @@ This project is a simple financing evaluation system that requests information a
    Inside the project directory, compile and run the code with the following commands:
 
     ```bash
-    cd sistema-de-avaliacao-de-financiamento
+    cd financing-evaluation-system
     javac Main.java
     java Main
     ```
