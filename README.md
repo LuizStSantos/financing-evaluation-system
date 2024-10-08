@@ -6,10 +6,11 @@ This project is a simple financing evaluation system that requests information a
 
 - Verification of financing eligibility based on:
     - Employment status or company ownership.
-    - Credit score status.
+    - Credit score.
     - Acceptance of the down payment amount and interest.
 - Calculation of the total amount paid at the end of the financing.
-- Calculation of monthly installments with compound interest.
+- Calculation of monthly installments using a compound interest formula.
+- User-friendly input validation and error handling for various inputs.
 
 ## Requirements
 
@@ -37,7 +38,7 @@ This project is a simple financing evaluation system that requests information a
    The system will prompt for the following information:
     - Do you have a job? (yes or no)
     - Do you own a company? (yes or no)
-    - Did your credit score drop from 670? (yes or no)
+    - Enter your credit score.
     - Enter the loan amount you wish to acquire.
     - Enter the down payment, either as a percentage or absolute value.
     - Enter the number of months for financing.
@@ -51,25 +52,26 @@ Do you have a job? (yes or no):
 Yes
 Do you own a company? (yes or no): 
 No
-Did your credit score drop from 670? (yes or no): 
-No
+Enter your credit score: 
+700
 Enter the loan amount you wish to acquire: 
 11,000
 Enter the down payment, either as a percentage or absolute value: 
-2,000 // Here it can be a value (e.g., 20%)
-The down payment is: R$ 2,000.00
+20% // or a fixed value (e.g., 2000)
+The down payment is: $2,200.00
 Do you accept the down payment amount? (yes or no): 
-yes
+Yes
 Enter the number of months for financing: 
 24
 Enter the monthly interest rate (e.g., 1.8): 
 5.8
-The total amount paid after 24 months will be: R$ 18,893.90
+The total amount paid after 24 months will be: $18,893.90
 Do you accept this amount with interest? (yes or no): 
 Yes
 Financing 'Approved!'
-The down payment will be: R$ 2,000.00
-With installments of R$ 703.91 for 24 months.
+The down payment will be: $2,200.00
+With installments of $703.91 for 24 months.
+
 ```
 
 ## Credits
