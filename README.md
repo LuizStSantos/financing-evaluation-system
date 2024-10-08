@@ -1,20 +1,19 @@
 # Financing Evaluation System
 
-This project is a simple financing evaluation system that requests information about employment, company ownership, name status with Serasa, loan amount, down payment, and calculates the financing based on the monthly interest rate and number of installments.
+This project is a simple financing evaluation system that requests information about employment, company ownership, credit score status, loan amount, down payment, and calculates the financing based on the monthly interest rate and number of installments.
 
 ## Features
 
 - Verification of financing eligibility based on:
-  - Employment status or company ownership.
-  - Status of the name with Serasa.
-  - Acceptance of the down payment amount and interest.
+    - Employment status or company ownership.
+    - Credit score status.
+    - Acceptance of the down payment amount and interest.
 - Calculation of the total amount paid at the end of the financing.
 - Calculation of monthly installments with compound interest.
 
 ## Requirements
 
 - Java 8 or higher
-- Maven or Gradle (optional, if using dependency management)
 
 ## How to Use
 
@@ -29,20 +28,20 @@ This project is a simple financing evaluation system that requests information a
 
     ```bash
     cd financing-evaluation-system
-    javac Main.java
-    java Main
+    javac FinancingEvaluationSystem.java
+    java FinancingEvaluationSystem
     ```
 
 3. **Interact with the system**:
 
    The system will prompt for the following information:
-   - Do you have a job? (yes or no)
-   - Do you own a company? (yes or no)
-   - Is your name with Serasa? (yes or no)
-   - Enter the loan amount you wish to acquire.
-   - Enter the down payment, either as a percentage or absolute value.
-   - Enter the number of months for financing.
-   - Enter the monthly interest rate.
+    - Do you have a job? (yes or no)
+    - Do you own a company? (yes or no)
+    - Did your credit score drop from 670? (yes or no)
+    - Enter the loan amount you wish to acquire.
+    - Enter the down payment, either as a percentage or absolute value.
+    - Enter the number of months for financing.
+    - Enter the monthly interest rate.
 
    After providing all this information, the system will calculate your eligibility for financing and display the down payment, monthly installments, and total amount to be paid.
 
@@ -52,11 +51,11 @@ Do you have a job? (yes or no):
 Yes
 Do you own a company? (yes or no): 
 No
-Is your name with Serasa? (yes or no): 
+Did your credit score drop from 670? (yes or no): 
 No
-Enter the loan amount to be acquired: 
+Enter the loan amount you wish to acquire: 
 11,000
-Enter the % for down payment or down payment amount: 
+Enter the down payment, either as a percentage or absolute value: 
 2,000 // Here it can be a value (e.g., 20%)
 The down payment is: R$ 2,000.00
 Do you accept the down payment amount? (yes or no): 
